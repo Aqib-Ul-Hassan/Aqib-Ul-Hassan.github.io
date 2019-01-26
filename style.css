@@ -1,0 +1,804 @@
+/****** GLOBAL ******/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  min-height: 100%;
+}
+
+
+body{
+  background-image: url('background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.container{
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.heading1{
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+/********** HEADING 3 TAG // UNIVERSITY WORK *********/
+.container div:nth-of-type(1){
+  flex-basis: 100%;
+  margin-bottom: 20px;
+
+}
+
+/********** HEADING 3 TAG // COMING SOON *********/
+.container div:nth-of-type(6){
+  flex-basis: 100%;
+  margin: 20px 0px;
+}
+
+.work h3{
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+/******** GLOBAL ENDS HERE ********/
+
+/**********************************/
+
+/******** HEADER / NAVIGATION BAR ********/
+/*
+header{
+  background-color: #090f0f;
+  color: #fff;
+  padding-top: 20px;
+  max-width: 100%;
+  min-height: 70px;
+  border: solid 1px #fff000; */
+
+  /****** MAKES THE HEADER TRANSPARENT ******/
+/*  background: rgba(204, 204, 204, 0.2); } */ /*** RGBA (Red, Green, Blue, Alpha (Opacity) ) ***/
+
+/*
+header nav{
+  max-width: 100%;
+}
+
+header ul{
+  text-align: center;
+  padding: 2px;
+
+}
+
+
+header li{
+  display: inline;
+  padding: 30px;
+  font-size: 20px;
+}
+
+header a{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+header nav a:hover{
+  color: #fff000;
+  border-bottom: solid 2px #fff000;
+}
+*/
+
+/********* PORTFOLIO WELCOME SECTION *********/
+
+/**** PORTFOLIO SPAN TEXT ****/
+/*
+section .pfolio:hover{
+  color: #fff;
+  border-top: solid #fff000 2px;
+  border-bottom: solid #fff000 2px;
+  border-top-left-radius: 20px;
+
+}
+*/
+/************* ************/
+.pfolio{
+  display: inline-block;
+  color: grey;
+}
+
+#welcome{
+  min-height: 680px;
+  text-align: center;
+  color: #fff;
+}
+
+#welcome h1{
+  margin-top: 200px;
+  font-size: 50px;
+  margin-bottom: 15px;
+  font-family: 'Acme', sans-serif;
+  word-spacing: 10px;
+}
+
+#welcome  p{
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+
+/***********************/
+/******** BOXES ********/
+/**********************/
+#boxes .container{
+  max-width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.5);
+
+}
+
+/********** FIRST BOX **********/
+.box-1{
+  background-image: url('tb.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*border: solid #fff000 1px;*/
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-1 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.box-1:hover h2{
+  opacity: 1;
+}
+
+.box-1 p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+
+.box-1:hover p{
+  opacity: 1;
+}
+
+/*
+.box-1 button{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+*/
+
+#mainButton{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+
+.box-1:hover #mainButton{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+
+/********** SECOND BOX **********/
+.box-2{
+  background-image: url('prisonEscape4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*border: solid #fff000 1px;*/
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-2 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.box-2:hover h2{
+  opacity: 1;
+}
+
+.box-2 p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 80px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-2:hover p{
+  opacity: 1;
+}
+
+/************ BUTTON *************/
+#mainButton2{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+
+.box-2:hover #mainButton2{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/************** THIRD BOX **************/
+.box-3{
+  background-image: url('img_manipulation_app.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-3 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.box-3:hover h2{
+  opacity: 1;
+}
+
+.box-3 p{
+  position: absolute;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-3:hover p{
+  opacity: 1;
+}
+
+.box-3 #note{
+  position: absolute;
+  bottom: 70px;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-3:hover #note{
+  opacity: 1;
+}
+
+#mainButton3{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-3:hover #mainButton3{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/********** FOURTH BOX *********/
+.box-4{
+  background-image: url('sound_mixer.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-4 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.box-4:hover h2{
+  opacity: 1;
+}
+
+.box-4 p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-4:hover p{
+  opacity: 1;
+}
+
+
+#mainButton4{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+
+.box-4:hover #mainButton4{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/*************** COMING SOON // FIFTH BOX **************/
+.box-5{
+  background-image: url('turkey_cs.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*border: solid #fff000 1px;*/
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-5 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-5:hover h2{
+  opacity: 1;
+}
+
+.box-5 p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-5:hover p{
+  opacity: 1;
+}
+
+/************** EDUCATION **************/
+.university{
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.university > *{
+  padding: 10px;
+}
+
+.university h3:nth-of-type(1){
+  color: #A9A9A9;
+}
+
+.university ul{
+  list-style-type: none;
+}
+
+.university li{
+  padding: 5px;
+}
+
+.university li:nth-child(odd){
+  color: #A9A9A9;
+}
+
+.college{
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.college > *{
+  padding: 10px;
+}
+
+.college h3:nth-of-type(1){
+  color: #A9A9A9;
+}
+
+/******** SKILLS ********/
+.skills{
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills h1{
+  margin-bottom: 20px;
+}
+
+.skills ul{
+  list-style-type: none;
+}
+
+.skills li{
+  padding: 5px;
+}
+
+.skills li:nth-child(odd){
+  color: #A9A9A9;
+}
+
+/***************** CONTACT FORM *****************/
+#contact{
+  margin-top: 100px;
+}
+
+#contact .container{
+  max-width: 500px;
+
+}
+
+#contactForm{
+  margin: 0 auto;
+}
+
+#contactForm h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.details{
+  margin: 15px;
+  padding: 10px;
+  /*border: solid 1px #ff0000;*/
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  margin-bottom: 10px;
+}
+
+input[type=text], input[type=email]{
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+input[type=submit]{
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+textarea{
+  height: 200px;
+  resize: none;
+  font-size: 16px;
+}
+
+#contactForm textarea::placeholder{
+  font-size: 16px;
+}
+
+/*********** FOOTER ***********/
+
+#socialMedia{
+  margin-top: 100px;
+  background-color: #090f0f;
+  color: #fff;
+  min-height: 100px;
+  /* padding: 30px; */
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.copyright{
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 70px;
+  text-align: center;
+}
+
+
+/*
+footer a{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+footer ul{
+  text-align: center;
+
+}
+
+footer li{
+  margin: 0 30px 0 30px;
+}
+
+#socialMedia ul{
+  text-decoration: none;
+  list-style-type: none;
+
+}
+
+#socialMedia li{
+  display: inline;
+}
+*/
+
+/******************************************/
+/************* MEDIA QUERIES **************/
+/*
+@media only screen and (max-width: 600px) {
+  body {
+    background: lightblue;
+  }
+}
+*/
+
+/*************** T A B L E T *************/
+@media only screen and (max-width: 768px) {
+
+
+  #welcome{
+    min-height: 500px;
+  }
+
+  #welcome h1{
+    margin-top: 100px;
+  }
+}
+
+/********** M O B I L E ( L ) **********/
+@media only screen and (max-width: 425px) {
+
+  body{
+    background: #1f1e1c;
+  }
+
+  #welcome{
+    min-height: 600px;
+
+  }
+
+  #welcome h1 {
+    margin-top: 50px;
+    color: #fff;
+  }
+
+  #welcome p {
+    margin-top: 50px;
+    color: #fff;
+  }
+
+  #boxes .container{
+    background: #e0e1e3;
+  }
+
+  #boxes h3{
+    color: #000;
+  }
+}
+
+/********** M O B I L E ( M ) **********/
+@media only screen and (max-width: 375px) {
+  #welcome{
+    min-height: 700px;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+  #welcome{
+    min-height: 750px;
+  }
+}
