@@ -1,22 +1,12 @@
-$(function(){
-  /*var effect = 'animated zoomOutLeft';*/
-  var stopEffect = 'animationend';
+// Change colour of button when clicked
 
-  $('.box-1').click(function(){
-    $(this).addClass('animated zoomOutLeft').one(stopEffect, function(){
-      $(this).removeClass('animated zoomOutLeft');
-    });
-  });
+function btn1(){
+  document.getElementById('mainButton').style.backgroundColor='#fff'; // Button colour
+  document.getElementById('mainButton').style.color='#000'; // Text colour
 
-  $('.box-2').hover(function(){
-    $(this).addClass('animated heartBeat').one(stopEffect, function(){
-      $(this).removeClass('animated heartBeat slow');
-    });
-  });
+}
 
-  $('.box-3').click(function(){
-    $(this).addClass('animated zoomOutRight').one(stopEffect, function(){
-      $(this).removeClass('animated zoomOutRight');
-    });
-  });
-});
+function btn2(){
+  document.getElementById('mainButton2').style.backgroundColor='#fff'; // Button colour
+  document.getElementById('mainButton2').style.color='#000'; // Text colour
+}
