@@ -9,17 +9,18 @@ html{
   min-height: 100%;
 }
 
-
 body{
-  background-image: url('background.jpg');
+/*  background-image: url('background.jpg');
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   max-width: 100%;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
-
 
 .container{
   max-width: 80%;
@@ -36,7 +37,6 @@ body{
 .container div:nth-of-type(1){
   flex-basis: 100%;
   margin-bottom: 20px;
-
 }
 
 /********** HEADING 3 TAG // COMING SOON *********/
@@ -46,58 +46,122 @@ body{
 }
 
 .work h3{
-  margin-left: 50px;
+  text-align: center;
   font-size: 20px;
 }
 
 /******** GLOBAL ENDS HERE ********/
 
-/**********************************/
+/* ------- */
 
 /******** HEADER / NAVIGATION BAR ********/
-/*
 header{
-  background-color: #090f0f;
+  width: 80%;
+  height: 150px;
   color: #fff;
   padding-top: 20px;
-  max-width: 100%;
-  min-height: 70px;
-  border: solid 1px #fff000; */
-
+  margin: 0 auto;
   /****** MAKES THE HEADER TRANSPARENT ******/
-/*  background: rgba(204, 204, 204, 0.2); } */ /*** RGBA (Red, Green, Blue, Alpha (Opacity) ) ***/
-
-/*
-header nav{
-  max-width: 100%;
+  /* background: rgba(204, 204, 204, 0.2); */  /*** RGBA (Red, Green, Blue, Alpha (Opacity) ) ***/
 }
 
 header ul{
-  text-align: center;
-  padding: 2px;
-
+  width: 100%;
+  max-width: 500px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
-
 
 header li{
-  display: inline;
-  padding: 30px;
-  font-size: 20px;
+  padding: 15px;
+  list-style: none;
+  margin: 0 auto;
 }
 
-header a{
-  color: #fff;
+ul li a{
   text-decoration: none;
-  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 30px;
 }
 
-
-header nav a:hover{
-  color: #fff000;
-  border-bottom: solid 2px #fff000;
+/* Each li social media colour corresponds to their own colour */
+/* ------- TWITTER ---- */
+ul li:nth-child(1) a{
+  color: #55acee;
 }
-*/
+/* ------- FACEBOOK ---- */
+/* ul li:nth-child(2) a{
+  color: #3b5999;
+} */
+/* ------- INSTAGRAM ---- */
+/* ul li:nth-child(3) a{
+  color: #e4405f;
+} */
+/* ------- LINKEDIN ---- */
+ul li:nth-child(2) a{
+  color: #0077B5;
+}
+/* ------- GITHUB ---- */
+ul li:nth-child(3) a{
+  color: #fff;
+}
 
+ul li a:hover{
+  color: #fff;
+}
+/* --- HOVER FOR GITHUB --- */
+ul li:nth-child(3) a:hover{
+  color: #000;
+}
+
+ul li a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  border-radius: 10%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+ul li a:hover::before{
+  transform: scale(1);
+}
+
+/* nth-child - every other li's background colour changes colour */
+/* ------- TWITTER ---- */
+ul li:nth-child(1) a:hover::before{
+  background: #55acee;
+}
+/* ------- FACEBOOK ---- */
+/* ul li:nth-child(2) a:hover::before{
+  background: #3b5999;
+} */
+/* ------- INSTAGRAM ---- */
+/* ul li:nth-child(3) a:hover::before{
+  background: #e4405f;
+} */
+/* ------- LINKEDIN ---- */
+ul li:nth-child(2) a:hover::before{
+  background: #0077b5;
+}
+/* ------- GITHUB ---- */
+ul li:nth-child(3) a:hover::before{
+  background: #fff;
+}
 /********* PORTFOLIO WELCOME SECTION *********/
 
 /**** PORTFOLIO SPAN TEXT ****/
@@ -107,13 +171,14 @@ section .pfolio:hover{
   border-top: solid #fff000 2px;
   border-bottom: solid #fff000 2px;
   border-top-left-radius: 20px;
-
 }
 */
+
+
 /************* ************/
 .pfolio{
   display: inline-block;
-  color: grey;
+  color: #000;
 }
 span{
   animation-delay: 2s;
@@ -125,8 +190,12 @@ span{
   color: #fff;
 }
 
+#welcome .container{
+  min-height: 400px;
+}
+
 #welcome h1{
-  margin-top: 200px;
+  padding-top: 100px;
   font-size: 50px;
   margin-bottom: 15px;
   font-family: 'Acme', sans-serif;
@@ -143,7 +212,7 @@ span{
 
 
 /***********************/
-/******** BOXES ********/
+/* ------ BOXES ------*/
 /**********************/
 #boxes .container{
   max-width: 100%;
@@ -152,7 +221,6 @@ span{
   justify-content: space-around;
   flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.5);
-
 }
 
 /********** FIRST BOX **********/
@@ -161,7 +229,6 @@ span{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*border: solid #fff000 1px;*/
   margin: 10px;
   padding: 10px;
   width: 350px;
@@ -204,29 +271,9 @@ span{
   transition: .5s;
 }
 
-
 .box-1:hover p{
   opacity: 1;
 }
-
-/*
-.box-1 button{
-  position: absolute;
-  bottom: 0;
-  padding: 7px 5px;
-  margin: 0 auto;
-  width: 40%;
-  margin-bottom: 15px !important;
-  display: block;
-  overflow: hidden;
-  color: #fff;
-  background-color: #000;
-  border: 2px solid #fff;
-  font-family: inherit;
-  opacity: 0;
-  transition: .5s;
-}
-*/
 
 #mainButton{
   position: absolute;
@@ -246,7 +293,6 @@ span{
   transition: .5s;
 }
 
-
 .box-1:hover #mainButton{
   opacity: 1;
   color: #fff;
@@ -257,14 +303,12 @@ span{
 }
 
 
-
 /********** SECOND BOX **********/
 .box-2{
   background-image: url('prisonEscape4.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*border: solid #fff000 1px;*/
   margin: 10px;
   padding: 10px;
   width: 350px;
@@ -330,7 +374,6 @@ span{
   opacity: 0;
   transition: .5s;
 }
-
 
 .box-2:hover #mainButton2{
   opacity: 1;
@@ -484,7 +527,6 @@ span{
   opacity: 1;
 }
 
-
 #mainButton4{
   position: absolute;
   bottom: 0;
@@ -503,7 +545,6 @@ span{
   transition: .5s;
 }
 
-
 .box-4:hover #mainButton4{
   opacity: 1;
   color: #fff;
@@ -519,7 +560,6 @@ span{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*border: solid #fff000 1px;*/
   margin: 10px;
   padding: 10px;
   width: 350px;
@@ -567,10 +607,12 @@ span{
 
 /************** EDUCATION **************/
 .university{
+  width: 100%;
   max-width: 500px;
   margin: 100px auto;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
@@ -595,9 +637,13 @@ span{
 }
 
 .college{
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .college > *{
@@ -610,10 +656,12 @@ span{
 
 /******** SKILLS ********/
 .skills{
+  width: 100%;
   max-width: 500px;
   margin: 100px auto;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
@@ -635,15 +683,21 @@ span{
 
 /***************** CONTACT FORM *****************/
 #contact{
-  margin-top: 100px;
+  max-width: 80%;
+  margin: 100px auto;
 }
 
 #contact .container{
+  width: 100%;
   max-width: 500px;
-
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 #contactForm{
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -653,12 +707,10 @@ span{
 }
 
 .details{
+  max-width: 500px;
   margin: 15px;
   padding: 10px;
-  /*border: solid 1px #ff0000;*/
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 label{
@@ -666,7 +718,7 @@ label{
 }
 
 input[type=text], input[type=email]{
-  width: 400px;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   border: 2px solid;
@@ -675,7 +727,6 @@ input[type=text], input[type=email]{
 
 input[type=submit]{
   width: 200px;
-  margin: 0 auto;
   padding: 10px 20px;
   color: #fff;
   background-color: #000;
@@ -683,100 +734,64 @@ input[type=submit]{
   border-radius: 10px;
   font-family: inherit;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
 
 textarea{
+  margin-top: 10px;
+  width: 100%;
   height: 200px;
   resize: none;
   font-size: 16px;
+  border: 2px solid;
 }
 
 #contactForm textarea::placeholder{
   font-size: 16px;
 }
 
-/*********** FOOTER ***********/
+/* --------------------------------------- */
+/* ----------- MEDIA QUERIES --------------*/
 
-#socialMedia{
-  margin-top: 100px;
-  background-color: #090f0f;
-  color: #fff;
-  min-height: 100px;
-  /* padding: 30px; */
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.copyright{
-  font-family: 'Permanent Marker', sans-serif;
-  font-size: 70px;
-  text-align: center;
-}
-
-
-/*
-footer a{
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-footer ul{
-  text-align: center;
-
-}
-
-footer li{
-  margin: 0 30px 0 30px;
-}
-
-#socialMedia ul{
-  text-decoration: none;
-  list-style-type: none;
-
-}
-
-#socialMedia li{
-  display: inline;
-}
-*/
-
-/******************************************/
-/************* MEDIA QUERIES **************/
-/*
-@media only screen and (max-width: 600px) {
-  body {
-    background: lightblue;
-  }
-}
-*/
-
-/*************** T A B L E T *************/
+/* ------------ T A B L E T ------------- */
 @media only screen and (max-width: 768px) {
-
 
   #welcome{
     min-height: 500px;
+    margin-top: 10px;
+  }
+
+  #welcome .container{
+    min-height: 400px;
   }
 
   #welcome h1{
-    margin-top: 100px;
+    padding-top: 50px;
   }
 }
 
-/********** M O B I L E ( L ) **********/
+/* --------- M O B I L E ( L ) -----------*/
 @media only screen and (max-width: 425px) {
 
   body{
     background: #1f1e1c;
   }
 
+  .pfolio{
+    color: #006400;
+  }
+
   #welcome{
     min-height: 600px;
+  }
 
+  #welcome .container{
+    min-height: 550px;
   }
 
   #welcome h1 {
-    margin-top: 50px;
+    padding-top: 50px;
     color: #fff;
   }
 
@@ -787,19 +802,23 @@ footer li{
 
   #boxes .container{
     background: #e0e1e3;
+    margin-top: 30px;
   }
 
   #boxes h3{
     color: #000;
   }
+
+  .university{
+    margin-top: 90px;
+  }
 }
 
-/********** M O B I L E ( M ) **********/
+/* ---------- M O B I L E ( M ) -------- */
 @media only screen and (max-width: 375px) {
   #welcome{
     min-height: 700px;
   }
-
 }
 
 @media only screen and (max-width: 320px) {
